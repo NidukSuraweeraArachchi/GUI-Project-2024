@@ -14,7 +14,6 @@ function Navbar() {
         <li><a href="#ride">Ride</a></li>
         <li><a href="#drive">Drive</a></li>
         <li><a href="#food">Food</a></li>
-        <li><a href="#market">Market</a></li>
         <li><a href="#about">About Us</a></li>
        
       </ul>

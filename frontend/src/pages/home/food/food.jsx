@@ -1,35 +1,33 @@
 import React from 'react';
 import './food.css';
-import backgroundImage from './path-to-your-background-image.jpg'; // Replace with actual path
+import food from '../../../assets/food.webp'; // Import your image
 
-const DeliveryPage = () => {
+const Food = () => {
   return (
-    <div className="delivery-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div
+      className="delivery-page"
+      style={{ backgroundImage: `url(${food})` }} // Add the image as a background
+    >
       <div className="content">
         <h1>Order delivery near you</h1>
-        <div className="input-container">
-          <div className="input-wrapper">
-            <span className="icon">📍</span> {/* Replace with an icon library */}
-            <input
-              type="text"
-              placeholder="Enter delivery address"
-              className="delivery-input"
-            />
-          </div>
-          <div className="dropdown-wrapper">
-            <select className="delivery-dropdown">
-              <option>Deliver now</option>
-              <option>Schedule for later</option>
-            </select>
-          </div>
-          <button className="find-food-btn">Find Food</button>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Enter delivery address"
+            className="input-box"
+          />
+          <select className="delivery-time">
+            <option value="now">Deliver now</option>
+            <option value="later">Deliver later</option>
+          </select>
+          <button className="find-food">Find Food</button>
         </div>
-        <p>
-          Or <a href="/signin" className="signin-link">Sign In</a>
-        </p>
+        <a href="/signin" className="signin-link">
+          Or Sign In
+        </a>
       </div>
     </div>
   );
 };
 
-export default DeliveryPage;
+export default Food;
