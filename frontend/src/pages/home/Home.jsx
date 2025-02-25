@@ -1,5 +1,5 @@
 import React from 'react';
-import './home.css';
+import './Home.css';
 import video from '../../assets/4k Busy City Night Road Timelapse Video.mp4'; // Ensure this path is correct
 import dp from '../../assets/dp.webp';
 import app from '../../assets/app.webp';
@@ -8,14 +8,17 @@ import appga from '../../assets/appga.webp';
 
 const Home = () => {
   return (
+
+    
     <div className="home-container">
-      {/* Hero Section */}
-      <main className="hero-section">
-        {/* Background Video */}
-        <video className="background-video" autoPlay muted loop>
+      <video className="background-video" autoPlay muted loop>
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+      {/* Hero Section */}
+      <main className="hero-section">
+        {/* Background Video */}
+        
 
         <h1>Your Journey, Simplified!</h1>
         <p className="tagline">

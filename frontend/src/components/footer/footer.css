@@ -1,55 +1,80 @@
 .footer {
-    background-color: #111; /* Dark background */
-    color: #ccc; /* Light gray text */
-    font-family: Arial, sans-serif;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .footer-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    border-bottom: 1px solid #333; /* Divider between top and bottom sections */
-    padding-bottom: 15px;
-  }
-  
-  .footer-links {
-    display: flex;
-    gap: 20px;
-    font-size: 0.9rem;
-  }
-  
-  .footer-links a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-links a:hover {
-    color: white;
-  }
-  
-  .footer-social {
-    display: flex;
-    gap: 15px;
-    font-size: 1.2rem;
-  }
-  
-  .footer-social a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-social a:hover {
-    color: white;
-  }
-  
-  .footer-bottom {
-    margin-top: 15px;
-    font-size: 0.8rem;
-    color: #666;
-  }
-  
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+}
+
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 100px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-icons a {
+  color: #fff;
+  margin: 0 5px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-apps img {
+  width: 150px;
+  margin: 0 10px;
+}
+
+.footer-info {
+  text-align: center;
+}
+
+.footer-info a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
