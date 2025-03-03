@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Admin Page Container */
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  /* Add New Item Button */
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Add New Item Button Container */
+  a button {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Table Header */
+  thead {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  th {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  /* Table Body */
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Table Cells */
+  td {
+    padding: 15px;
+    font-size: 15px;
+    color: #555;
+  }
+  
+  /* Food Image */
+  td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  /* Action Buttons */
+  td button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Edit Button */
+  td button:first-of-type {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  td button:first-of-type:hover {
+    background-color: #218838;
+  }
+  
+  /* Delete Button */
+  td button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  td button:last-of-type:hover {
+    background-color: #c82333;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  

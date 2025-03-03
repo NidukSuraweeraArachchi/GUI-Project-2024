@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import  './AddFood.css';
 
 function AddFood() {
   const [title, setTitle] = useState('');

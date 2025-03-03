@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './../../components/foodnavbar/foodnav'; // Import the Navbar component
+import Navbar from './../../components/foodnavbar/foodnav';
 import './item.css';
+import food from '../../assets/f2.jpg';
 
 const Item = () => {
   const [products, setProducts] = useState([]);
   const [visibleProducts, setVisibleProducts] = useState(4);
   const [counts, setCounts] = useState({});
   const [cartItems, setCartItems] = useState([]);
-  const [loading, setLoading] = useState(true); // Track loading state
-  const [error, setError] = useState(null); // Track error state
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [selectedPayment, setSelectedPayment] = useState('');
 
-  // Fetch products from the backend API
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -19,9 +20,8 @@ const Item = () => {
         setProducts(data);
       } catch (error) {
         setError('Failed to fetch products. Please try again later.');
-        console.error('Error fetching products:', error);
       } finally {
-        setLoading(false); // Stop loading after fetch attempt
+        setLoading(false);
       }
     };
 
@@ -50,6 +50,14 @@ const Item = () => {
     setCartItems((prevItems) => [...prevItems, product]);
   };
 
+  const handlePayment = () => {
+    if (cartItems.length === 0) {
+      alert('Your cart is empty!');
+      return;
+    }
+    alert(`Processing payment with ${selectedPayment || 'No Method Selected'}`);
+  };
+
   return (
     <div>
       <Navbar cartCount={cartItems.length} />
@@ -61,15 +69,13 @@ const Item = () => {
               <button className="see-all-button">See all</button>
             </div>
 
-            {/* Display Loading or Error Messages */}
             {loading && <p>Loading products...</p>}
             {error && <p>{error}</p>}
 
-            {/* Product Grid */}
             <div className="product-grid">
               {products.slice(0, visibleProducts).map((product) => (
                 <div className="product-card" key={product.id}>
-                  <img src={product.image} alt={product.title} className="product-image" />
+                  <img src={food} alt={product.title} className="product-image" />
                   <div className="quick-view">Quick view</div>
                   <div className="product-details">
                     <div className="product-name">{product.title}</div>
@@ -94,7 +100,6 @@ const Item = () => {
           </section>
         </div>
 
-        {/* Fixed Cart Section */}
         <div className="cart-section">
           <h3>Your Cart</h3>
           {cartItems.length > 0 ? (
@@ -102,7 +107,7 @@ const Item = () => {
               {cartItems.map((item, index) => (
                 <li key={index}>
                   <div className="cart-item">
-                    <img src={item.image} alt={item.title} className="cart-item-image" />
+                    <img src={food} alt={food} className="cart-item-image" />
                     <div className="cart-item-details">
                       <span>{item.title}</span>
                       <span>LKR {item.price}</span>
@@ -114,6 +119,19 @@ const Item = () => {
           ) : (
             <p>Your cart is empty.</p>
           )}
+        </div>
+
+        <div className="payment-section">
+          <h3>Select Payment Method</h3>
+          <select onChange={(e) => setSelectedPayment(e.target.value)} className="payment-select">
+            <option value="">Select Payment</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="PayPal">PayPal</option>
+          </select>
+          <button className="pay-button" onClick={handlePayment}>
+            Proceed to Pay
+          </button>
         </div>
       </div>
     </div>
