@@ -35,7 +35,7 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-left:250px;
 }
 
 .header h1 {
@@ -56,31 +56,40 @@ body, html {
   margin-bottom: 10px;
 }
 
-.content {
+ .content {
   font-size: 20px;
   text-align:right;
   margin-top: 30px;
-  padding-left: 200px;
-}
+ 
+} 
 
 .contact {
   list-style: none;
   padding: 0;
-  margin: 10px 0;
-}
-
-.contact li {
-  margin: 5px 0;
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
 }
 
 .app-links img {
   height: 50px;
   margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.app-links img:hover {
+  transform: scale(1.1);
 }
 
 .qr-code {
-  height: 50px;
-  margin-top: 10px;
+  height: 80px;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+}
+
+.qr-code:hover {
+  transform: rotate(5deg) scale(1.1);
 }
 
 /* Benefits Section */
@@ -99,7 +108,7 @@ body, html {
 .text-content {
   flex: 1;
   max-width: 50%;
-  padding: 20px;
+  padding: 80px;
 }
 
 .text-content p {
@@ -156,7 +165,8 @@ body, html {
   }
 
   .text-content, .image-content {
-    max-width: 100%;
+    max-width: 0%;
+    
   }
 
   .header h1 {

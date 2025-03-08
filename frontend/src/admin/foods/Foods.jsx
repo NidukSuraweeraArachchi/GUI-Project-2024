@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './foods.css';
-import add from './../../assets/f6.jpg';
+//import add from './../../assets/f6.jpg';
 
 function Foods() {
   const [foods, setFoods] = useState([]);
@@ -48,12 +48,12 @@ function Foods() {
             <th>Price</th>
             <th>Actions</th>
           </tr>
-       </thead>
+        </thead>
         <tbody>
           {foods.map(food => (
             <tr key={food.id}>
               <td>{food.id}</td>
-             <td><img src={add} alt={add} width={50} /></td>
+              <td><img src={food.image} alt={food.title} width={50} /></td>
               <td>{food.title}</td>
               <td>LKR {food.price}</td>
               <td>

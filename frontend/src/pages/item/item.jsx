@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './../../components/foodnavbar/foodnav';
 import './item.css';
-import food from '../../assets/f2.jpg';
 
 const Item = () => {
   const [products, setProducts] = useState([]);
@@ -75,7 +74,12 @@ const Item = () => {
             <div className="product-grid">
               {products.slice(0, visibleProducts).map((product) => (
                 <div className="product-card" key={product.id}>
-                  <img src={food} alt={product.title} className="product-image" />
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="product-image"
+                    onError={(e) => (e.target.src = '/default-image.jpg')}
+                  />
                   <div className="quick-view">Quick view</div>
                   <div className="product-details">
                     <div className="product-name">{product.title}</div>
@@ -107,7 +111,12 @@ const Item = () => {
               {cartItems.map((item, index) => (
                 <li key={index}>
                   <div className="cart-item">
-                    <img src={food} alt={food} className="cart-item-image" />
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="cart-item-image"
+                      onError={(e) => (e.target.src = '/default-image.jpg')}
+                    />
                     <div className="cart-item-details">
                       <span>{item.title}</span>
                       <span>LKR {item.price}</span>
